@@ -16,9 +16,9 @@ struct triangle
 
 double distance1 (struct triangle t); 
 
-double distance1 (struct point2d x, struct point2d y);
+double distance (struct point2d x, struct point2d y);
 /*distance B-C*/
-double distance1 (struct point2d a, struct point2d b)
+double distance (struct point2d a, struct point2d b)
 {
     return sqrt((b.x-a.x)*(b.x-a.x)+(b.y-a.y)*(b.y-a.y));
 }
@@ -34,7 +34,7 @@ int main(void)
 {
     struct triangle t1;
     double s, d1, d2, d3, r;
-}
+
     /*initialization*/
     t1.a=(struct point2d) {2., 2.};
     t1.b=(struct point2d) {-2.,1.};
@@ -47,7 +47,7 @@ int main(void)
     printf("Distance Between C & A: %14.6f\n", d1);
 
     d2=distance(t1.a, t1.b);
-    printf("Distance Between A & B: %14.6\n", d2);
+    printf("Distance Between A & B: %14.6f\n", d2);
 
     d3=distance(t1.c, t1.b);
     printf("Distance Between C & B: %14.6f\n", d3);
